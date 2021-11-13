@@ -9,7 +9,9 @@ class SongList extends Component {
                     <div className="right floated content">
                         <button className="ui button primary">Select</button>
                     </div>
-                    <div className="content">{song.title}</div>
+                    <div className="content">
+                        <div><b>{song.title === this.props.favoriteTitle && 'FAVORITE!'}</b></div>
+                    </div>
                 </div>
             );
         });
@@ -21,7 +23,8 @@ class SongList extends Component {
 }
 
 const mapStateToProps = state => {
-    return { songs: state.songs };
+    console.log(state);
+    return { songs: state.songs.songs, favoriteTitle: state.songs.favoriteTitle };
 }
 
 export default connect(mapStateToProps)(SongList);
