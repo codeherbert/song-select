@@ -9,8 +9,8 @@ const SongDetails = ({ song, favoriteTitle }) => {
     return (
         <div>
             <h3>Details for:</h3>
-            <p>Artist: {song.artist}</p>
             <p>Title: {song.title}</p>
+            <p>Artist: {song.artist}</p>
             <p>Song duration: {song.duration}</p>
             <p><i><b>{song.title === favoriteTitle && 'FAVORITE!'}</b></i></p>
         </div>
