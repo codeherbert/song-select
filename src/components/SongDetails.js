@@ -9,10 +9,10 @@ const SongDetails = ({ song, favoriteTitle }) => {
     return (
         <div>
             <h3>Details for:</h3>
-            <p>Title: {song.title}</p>
             <p>Artist: {song.artist}</p>
             <p>Song duration: {song.duration}</p>
             <p><i><b>{song.title === favoriteTitle && 'FAVORITE!'}</b></i></p>
+            <iframe width="560" height="315" src={song.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     )
 }
