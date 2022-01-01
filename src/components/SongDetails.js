@@ -6,13 +6,21 @@ const SongDetails = ({ song, favoriteTitle }) => {
         return <h3>Select a Song...</h3>
     }
 
+    const stylesFavorite = {
+        backgroundColor: "pink",
+        marginLeft: "10px",
+        borderRadius: "10px",
+        fontWeight: "bold",
+        padding: "3px 0"
+    }
+
     return (
         <div>
             <h3>Details for:</h3>
-            <p>Artist: {song.artist}</p>
+            <p>Artist: {song.artist}<span style={stylesFavorite}>{song.title === favoriteTitle && 'FAVORITE!'}</span></p>
             <p>Song duration: {song.duration}</p>
-            <p><i><b>{song.title === favoriteTitle && 'FAVORITE!'}</b></i></p>
-            <iframe width="560" height="315" src={song.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {/* <p><i></i></p> */}
+            <iframe style= {{maxWidth: "-webkit-fill-available"}}width="560" height="315" src={song.video} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     )
 }
