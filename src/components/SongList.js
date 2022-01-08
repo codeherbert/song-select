@@ -13,7 +13,6 @@ class SongList extends Component {
                         onClick={ () => this.props.selectSong(song) }>Select</button>
                     </div>
                     <div className="content">{song.title}
-                        {/* <div><b>{song.title === this.props.favoriteTitle && 'FAVORITE!'}</b></div> */}
                     </div>
                 </div>
             );
